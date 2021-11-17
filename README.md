@@ -10,6 +10,7 @@
 | 05.11.2021 | L08 - Specification<br/>L07 - Python functions | [Линк](https://drive.google.com/file/d/1OJlFW5-79cBhZYWWfIKtt0X4MqHqgrqr/view?usp=sharing) |9iuhhg
 | 10.11.2021 | L07 - Specification<br/>OOP principles | [Линк](https://drive.google.com/file/d/1ZF6fc_DJnr0hufUOpTRzuORJiRHN9H6-/view?usp=sharing) |
 | 12.11.2021 | Feedback & Specification | [Линк](https://drive.google.com/file/d/14UdTYcRATQBN2A4-tVUsktJhTR2NM-ws/view?usp=sharing) |
+| 17.11.2021 | Specification<br/>L09 - Estimations | [Линк](https://drive.google.com/file/d/1VQhw6VYt11h4DSw1J-v8MZ2_A4rm1chp/view?usp=sharing) |
 
 ## HackerRank профили
 https://docs.google.com/spreadsheets/d/1lRLrL_mw0Cajzl5P5gce5cbIvzQ0olNchpSpLRanqBw/edit?usp=sharing
