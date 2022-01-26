@@ -12,6 +12,7 @@
 | 12.11.2021 | Feedback & Specification | [Линк](https://drive.google.com/file/d/14UdTYcRATQBN2A4-tVUsktJhTR2NM-ws/view?usp=sharing) |
 | 17.11.2021 | Specification<br/>L09 - Estimations | [Линк](https://drive.google.com/file/d/1VQhw6VYt11h4DSw1J-v8MZ2_A4rm1chp/view?usp=sharing) |
 | 19.11.2021 | Software Architecture | [Линк](https://drive.google.com/file/d/1KS8dEJmwY6p2BOfHzmuDN_0CbFxLDtY9/view?usp=sharing) |
+| 26.01.2022 | Flask | [Линк](https://drive.google.com/file/d/1CFoqyhDmPeJtcYribtw4two6HVin6atY/view?usp=sharing) |
 
 ## HackerRank профили
 https://docs.google.com/spreadsheets/d/1lRLrL_mw0Cajzl5P5gce5cbIvzQ0olNchpSpLRanqBw/edit?usp=sharing
