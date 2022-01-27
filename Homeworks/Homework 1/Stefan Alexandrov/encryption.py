@@ -1,0 +1,131 @@
+from operator import index
+
+
+def generateMatrix(keyword):
+    matrix = []
+    for i in range(len(keyword)):
+        matrix.append(keyword[i])
+    
+    for i in range(ord('A'), ord('Z') + 1):
+        if keyword.find(chr(i)) != -1 or chr(i) == 'J':
+            continue
+
+        matrix.append(chr(i))
+
+    return matrix
+
+matrix = generateMatrix('TUES')
+
+def encrypt(message):
+    message = message.upper()
+    message = message.replace(' ', '')
+    message = message.replace('J', 'I')
+
+    if len(message) % 2 != 0:
+        message += 'X'
+
+    separate = []
+    piece = ''
+    for i in range(len(message)):
+        piece += message[i]
+
+        if i % 2 != 0 or i == len(message) - 1:
+            separate.append(piece)
+            piece = ''
+
+    for i in range(len(separate)):
+        if separate[i][0] == separate[i][1]:
+            separate[i] = separate[i][:-1]
+            separate[i] += 'X'
+        
+
+    piece = ''
+    encryption = []
+    for i in separate:
+        index1 = 0
+        index2 = 0
+
+        for j in range(len(matrix)):
+            if i[0] == matrix[j]:
+                index1 = j
+
+            if i[1] == matrix[j]:
+                index2 = j
+
+        if index1 < index2:
+            if index1 - index2 < 5:
+                if index1 % 5 != 4:
+                    index1 += 1
+                else:
+                    index1 -= 4
+                index2 += 1
+
+            elif index1 % 5 > index2 % 5:
+                rowDifference = 0
+
+                while index2 - 5 > index1:
+                    index2 -= 5
+                    rowDifference += 1
+
+                index1 += rowDifference * 5
+
+            elif index1 % 5 < index2 % 5:
+                rowDifference = 0
+
+                while index1 + 5 < index2:
+                    index1 += 5
+                    rowDifference += 1
+
+                index2 -= rowDifference * 5
+
+            elif index1 % 5 == index2 % 5:
+                if index2 + 5 > len(matrix) - 1:
+                    index2 -= 20
+                else:
+                    index2 += 5
+                
+                index1 += 5
+            
+        else:
+            if index2 - index1 < 5:
+                if index2 % 5 != 4:
+                    index2 += 1
+                else:
+                    index2 -= 4
+                index1 += 1
+
+            elif index2 % 5 > index1 % 5:
+                rowDifference = 0
+
+                while index1 - 5 > index2:
+                    index1 -= 5
+                    rowDifference += 1
+
+                index2 += rowDifference * 5
+
+            elif index2 % 5 < index1 % 5:
+                rowDifference = 0
+
+                while index2 + 5 < index1:
+                    index2 += 5
+                    rowDifference += 1
+
+                index1 -= rowDifference * 5
+
+            elif index2 % 5 == index1 % 5:
+                if index1 + 5 > len(matrix) - 1:
+                    index1 -= 20
+                else:
+                    index1 += 5
+                
+                index2 += 5
+
+        piece += matrix[index1]
+        piece += matrix[index2]
+        encryption.append(piece)
+        piece = ''
+
+    encryptedMessage = ''
+    return (encryptedMessage.join(encryption))
+
+print(encrypt('hide the gold in the tree stump'))
